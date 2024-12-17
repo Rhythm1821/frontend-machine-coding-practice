@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+</head>
+<body>
+
+    <div class="container">
+        <span class="container__title">Countdown Timer</span>
+
+        <div class="container__labels">
+            <p class="container__labels--labels">Hours</p>
+            <p class="container__labels--labels">Minutes</p>
+            <p class="container__labels--labels">Seconds</p>
+        </div>
+
+        <div class="container__inputs">
+            <input oninput="this.value=this.value.slice(0,this.maxLength)" type="number" maxlength="2" class="container__inputs--time hour" placeholder="00">
+            <input oninput="this.value=this.value.slice(0,this.maxLength)" type="number" maxlength="2" class="container__inputs--time minute" placeholder="00">
+            <input oninput="this.value=this.value.slice(0,this.maxLength)" type="number" maxlength="2" class="container__inputs--time second" placeholder="00">
+        </div>
+
+        <div class="container__btns">
+            <button class="btn start">Start</button>
+            <button class="btn stop">Stop</button>
+            <button class="btn reset">Reset</button>
+        </div>
+    </div>
+    
+    <script src="./script.js"></script>
+</body>
+</html>
