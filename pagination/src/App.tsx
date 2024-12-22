@@ -28,7 +28,7 @@ function App() {
   return (
     <>
     {
-      products.map((product: ProductProps) => (
+      products.length > 0 && products.map((product: ProductProps) => (
         <div key={product.id}>
         <h1>{product.title}</h1>
         <p>Decription: {product.description}</p>
