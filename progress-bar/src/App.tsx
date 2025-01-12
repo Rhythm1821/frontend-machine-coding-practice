@@ -1,19 +1,10 @@
-import { useEffect, useState } from 'react'
 import './App.css'
+import useProgressTimer from './hooks/useProgressTimer'
 import ProgressBar from './ProgressBar'
 
 function App() {
-  const [value,setValue] = useState(0)
-
-  useEffect(()=>{
-    setInterval(()=>{
-      if (value >= 100) {
-        return
-      }
-      setValue(value=>value+1)
-    },1000)
-  },[])
-
+  const {value} = useProgressTimer({duration: 1000, step: 1, maxValue: 100})
+  
   return (
     <>
     <ProgressBar value={value}/>
